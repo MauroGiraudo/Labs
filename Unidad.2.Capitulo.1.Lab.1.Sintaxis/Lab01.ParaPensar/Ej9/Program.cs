@@ -21,11 +21,11 @@ namespace Ej9
                     ar[i, j] = " ";
                 }
             }
-            Console.Clear();
+            Console.WriteLine();
             for (int i = 0; i < filas; i++)
             {
                 int asteriscos = 2 * i + 1;
-                int media = (columnas / 2) + 1;
+                int media = (columnas / 2);
                 for (int j = (media - i); j <= (media + i); j++)
                 {
                     ar[i, j] = "*";
