@@ -49,7 +49,7 @@
     <Compile Include="Triangulo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DiagramaClases.cd" />
+    <None Include="Diagrama\DiagramaClases.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
