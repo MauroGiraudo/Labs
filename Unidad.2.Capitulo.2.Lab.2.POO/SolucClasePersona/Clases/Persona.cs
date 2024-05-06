@@ -80,14 +80,15 @@ namespace Clases
             Console.WriteLine("¡Hola! Mi nombre es " + m_nombre + " " + m_apellido);
         }
 
-        public int GetAge(int anio)
+        public void GetAge(int anio)
         {
             int anioNacimiento = DateTime.Now.Year - Edad;
             if (anio - anioNacimiento >= 0)
             {
-                return anio - anioNacimiento;
+                Console.WriteLine(anio - anioNacimiento);
+            } else { 
+                Console.WriteLine("¡La persona aún no había nacido!");
             }
-            return -1;
         }
     }
 }
