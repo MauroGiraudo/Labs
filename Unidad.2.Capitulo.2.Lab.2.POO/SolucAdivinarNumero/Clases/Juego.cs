@@ -30,7 +30,7 @@ namespace Clases
 
         public void ComenzarJuego()
         {
-            int opc = 0;
+            int opc;
             Record = 0;
             do
             {
@@ -106,24 +106,21 @@ namespace Clases
                     do
                     {
                         Console.Clear();
-                        Console.WriteLine("1- Volver a jugar\n\n2- Ver mejor récord \n\n3- Salir");
+                        Console.Write("1- Volver a jugar\n\n2- Ver récord \n\n3- Salir\n\nIngrese el número de la opción a acceder: ");
                         opc = int.Parse(Console.ReadLine());
                         if (opc < 1 || opc > 3)
                         {
-                            Console.WriteLine(opc + "No es una opción válida. Inténtelo nuevamente");
+                            Console.WriteLine(opc + " No es una opción válida. Inténtelo nuevamente");
                             Console.ReadLine();
                         }
                     } while (opc < 1 || opc > 3);
-                    switch (opc)
+                    if (opc == 2)
                     {
-                        case 2:
                             Console.Clear();
-
                             Console.WriteLine("El récord actual es de: " + RecordActual() + " intentos (Máximo = 5)");
                             Console.WriteLine();
                             Console.WriteLine("Presione alguna tecla para continuar");
                             Console.ReadLine();
-                            break;
                     }
                 } while (opc != 1 && opc != 3);
             } while (opc != 3);
