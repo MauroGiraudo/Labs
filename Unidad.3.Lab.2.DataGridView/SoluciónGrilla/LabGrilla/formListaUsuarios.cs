@@ -26,6 +26,9 @@ namespace LabGrilla
             this.dgvUsuarios.AutoGenerateColumns = false;
             this.oUsuarios = new Negocio.Usuarios();
             this.dgvUsuarios.DataSource = this.oUsuarios.GetAll();
+            
+            this.dataGridView1.DataSource = this.oUsuarios.GetAll();
+
         }
         private void RecargarGrilla()
         {
