@@ -13,6 +13,7 @@ namespace LabGrilla
 {
     public partial class formListaUsuarios : Form
     {
+        private Negocio.Usuarios _usuarios;
         public Negocio.Usuarios oUsuarios
         {
             get { return _usuarios; }
