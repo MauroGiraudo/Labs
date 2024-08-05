@@ -19,7 +19,7 @@ namespace Ejercicio_1
         }
         public override DataTable getTabla()
         {
-            this.adapater = new MySqlDataAdapter("select * from contactos",
+            this.adapater = new MySqlDataAdapter("SELECT * FROM contactos",
             this.connectionString);
             DataTable contactos = new DataTable();
             this.adapater.Fill(contactos);

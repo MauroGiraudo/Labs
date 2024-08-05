@@ -19,7 +19,7 @@ namespace Ejercicio_4
             dtEmpresas.Columns.Add(colCompanyName);
 
             SqlConnection myconn = new SqlConnection();
-            myconn.ConnectionString = "Data Source=LOCALHOST;Initial Catalog=Northwind; User ID=sa;Pwd=123";
+            myconn.ConnectionString = "Data Source=MAUROG;Initial Catalog=Academia;Integrated Security=true;Trusted_Connection=true";
 
             SqlCommand myCommand = new SqlCommand();
             myCommand.CommandText = "SELECT CustomerID, CompanyName FROM Customers";

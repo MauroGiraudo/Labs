@@ -33,5 +33,16 @@ namespace Ejercicio_7.Properties {
                 return ((string)(this["EmpresasConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MAUROG;Initial Catalog=Academia;Integrated Security=True;TrustServerC" +
+            "ertificate=True")]
+        public string AcademiaConnectionString {
+            get {
+                return ((string)(this["AcademiaConnectionString"]));
+            }
+        }
     }
 }

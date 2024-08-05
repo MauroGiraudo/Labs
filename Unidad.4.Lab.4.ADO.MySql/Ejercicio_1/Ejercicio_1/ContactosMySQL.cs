@@ -39,7 +39,7 @@ namespace Ejercicio_1
         {
             using (MySqlConnection Conn = new MySqlConnection(connectionString))
             {
-                MySqlCommand cmdInsert = new MySqlCommand("insert into contactos" +
+                MySqlCommand cmdInsert = new MySqlCommand("insert into net.contactos" +
             "values(@id,@nombre,@apellido,@email,@telefono)", Conn);
                 cmdInsert.Parameters.Add("@id", MySqlDbType.Int32);
                 cmdInsert.Parameters.Add("@nombre", MySqlDbType.VarChar);
@@ -75,7 +75,7 @@ namespace Ejercicio_1
                         cmdInsert.Parameters["@apellido"].Value = fila["apellido"];
                         cmdInsert.Parameters["@email"].Value = fila["email"];
                         cmdInsert.Parameters["@telefono"].Value = fila["telefono"];
-                        cmdInsert.ExecuteNonQuery();
+                        cmdInsert.ExecuteNonQuery(); //En esta línea salta el error.
                     }
                 }
                 if (filasBorradas != null)

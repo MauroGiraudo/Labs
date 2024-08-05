@@ -7,12 +7,15 @@ using System.Data;
 using System.Net.Http.Headers;
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
+using System.Data.Common;
 
 
 namespace Ejercicio_1
 {
     internal class Contactos
     {
+        protected DataAdapter adapater;
+        
         protected DataTable misContactos;
 
         public Contactos()
@@ -51,7 +54,15 @@ namespace Ejercicio_1
             foreach (DataColumn col in this.misContactos.Columns)
             {
                 Console.Write("Ingrese {0}:", col.ColumnName);
-                fila[col] = Console.ReadLine();
+                if (col.ColumnName == "id")
+                {
+                    fila[col] = int.Parse(Console.ReadLine());
+                }
+                else
+                {
+                    fila[col] = Console.ReadLine();
+                }
+                
             }
             this.misContactos.Rows.Add(fila);
         }

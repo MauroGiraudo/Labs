@@ -16,7 +16,7 @@ namespace Ejercicio_5
             dtEmpresas.Columns.Add("CustomerID", typeof(string));
             dtEmpresas.Columns.Add("CompanyName", typeof(string));
             SqlConnection myconn = new SqlConnection();
-            myconn.ConnectionString = "Data Source=LOCALHOST;Initial Catalog=Northwind; User ID=sa;Pwd=123";
+            myconn.ConnectionString = "Data Source=MAUROG;Initial Catalog=Academia;Integrated Security=true;Trusted_Connection=true";
             SqlDataAdapter myAdap = new SqlDataAdapter("SELECT CustomerID, CompanyName FROM Customers", myconn);
 
             myconn.Open();

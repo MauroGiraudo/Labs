@@ -16,5 +16,12 @@ namespace Ejercicio_7
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'academiaDataSet.Customers' Puede moverla o quitarla según sea necesario.
+            this.customersTableAdapter.Fill(this.academiaDataSet.Customers);
+
+        }
     }
 }
