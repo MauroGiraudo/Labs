@@ -41,7 +41,7 @@ namespace API_Rest_Net_Core.Controllers
             return CreatedAtAction(nameof(GetById), new { DNI = newAlumno.DNI }, newAlumno);
         }
 
-        [HttpPut]
+        [HttpPut("{DNI}")]
         public ActionResult Update(string DNI, NewAlumno newAlumno)
         {
             if(DNI != newAlumno.DNI)
@@ -53,7 +53,7 @@ namespace API_Rest_Net_Core.Controllers
             return NoContent();
         }
 
-        [HttpDelete]
+        [HttpDelete("{DNI}")]
         public ActionResult<NewAlumno> Delete(String DNI)
         {
             var alumno = _context.newAlumnos.Find(DNI);
